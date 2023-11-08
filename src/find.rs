@@ -10,13 +10,13 @@ pub fn busca_binaria(array: &[i32], buscado: i32) -> Option<&str> {
     while inicio <= fim {
         let meio = (inicio+fim)/2;
 
-        if array[meio] == buscado {
-            encontrado = true;
-            break;
-        } else if array[meio] < buscado {
-            inicio = meio + 1;
-        } else {
-            fim = meio - 1;
+        match array[meio] {
+            x if x == buscado => {
+              encontrado = !encontrado;
+              break;
+            },
+            x if x < buscado => inicio = meio + 1,
+            _ => fim = meio - 1
         }
     }
 
