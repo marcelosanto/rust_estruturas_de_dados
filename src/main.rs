@@ -1,6 +1,6 @@
-use crate::find::busca_binaria;
+use algoritmos::busca_binaria::busca_binaria;
 
-mod find;
+pub mod algoritmos;
 
 fn main() {
     let array = [
