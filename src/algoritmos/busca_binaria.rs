@@ -1,6 +1,6 @@
 pub fn busca_binaria<T: PartialOrd + Copy>(array: &[T], buscado: T) -> Option<usize> {
     if array.is_empty() {
-        None
+        return None;
     } else {
         let mut inicio = 0;
         let mut fim = array.len() - 1;
@@ -16,6 +16,6 @@ pub fn busca_binaria<T: PartialOrd + Copy>(array: &[T], buscado: T) -> Option<us
                 _ => fim = meio - 1,
             }
         }
-        None
     }
+    None
 }
