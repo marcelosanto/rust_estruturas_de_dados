@@ -1,4 +1,4 @@
-pub fn busca_binaria(array: &[i32], buscado: i32) -> Option<usize> {
+pub fn busca_binaria<T: PartialOrd + Copy>(array: &[T], buscado: T) -> Option<usize> {
     if array.is_empty() {
         None
     } else {
